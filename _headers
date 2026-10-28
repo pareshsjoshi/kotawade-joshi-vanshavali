@@ -1,0 +1,6 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-LCqNtdvr1tk6YDRf+RpOwZZ4TWAfXkfyE6DTUnq4/8s=' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://nyjonrirkvpsiovrqouv.supabase.co wss://nyjonrirkvpsiovrqouv.supabase.co https://challenges.cloudflare.com; img-src 'self' data: blob: https://nyjonrirkvpsiovrqouv.supabase.co ; font-src 'self' data:; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

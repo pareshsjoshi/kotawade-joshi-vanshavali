@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="mr">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39; &#39;sha256-LCqNtdvr1tk6YDRf+RpOwZZ4TWAfXkfyE6DTUnq4/8s=&#39; https://challenges.cloudflare.com; style-src &#39;self&#39; &#39;unsafe-inline&#39;; connect-src &#39;self&#39; https://nyjonrirkvpsiovrqouv.supabase.co wss://nyjonrirkvpsiovrqouv.supabase.co https://challenges.cloudflare.com; img-src &#39;self&#39; data: blob: https://nyjonrirkvpsiovrqouv.supabase.co ; font-src &#39;self&#39; data:; frame-src https://challenges.cloudflare.com; object-src &#39;none&#39;; base-uri &#39;none&#39;; form-action &#39;self&#39;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f7f4ed" />
+    <meta name="description" content="Interactive Joshi family genealogy" />
+    <title>जोशी वंशावळी</title>
+    <style>
+      /* Critical colours also cover the interval before application styles load. */
+      html {
+        background: #f7f4ed;
+        color-scheme: light;
+      }
+      html[data-theme='dark'] {
+        background: #1c1917;
+        color-scheme: dark;
+      }
+    </style>
+    <script>
+      // Match the saved/device theme before the page paints, even on slow connections.
+      (() => {
+        let preference;
+        try {
+          preference = localStorage.getItem('genealogy-theme');
+        } catch {}
+        const theme =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = theme;
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute('content', theme === 'dark' ? '#1c1917' : '#f7f4ed');
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-DbeWDZff.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CbmC3jvQ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
